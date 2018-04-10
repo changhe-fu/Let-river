@@ -657,17 +657,21 @@ Vue.component('my-component', {
 当使用 DOM 作为模板时 (例如，使用 el 选项来把 Vue 实例挂载到一个已有内容的元素上)，你会受到 HTML 本身的一些限制，因为 Vue 只有在浏览器解析、规范化模板之后才能获取其内容。尤其要注意，像 <ul>、<ol>、<table>、<select> 这样的元素里允许包含的元素有限制，而另一些像 <option> 这样的元素只能出现在某些特定元素的内部。
 
 在自定义组件中使用这些受限制的元素时会导致一些问题，例如：
+
 ```
 <table>
   <my-row>...</my-row>
 </table>
 ```
+
 自定义组件 <my-row> 会被当作无效的内容，因此会导致错误的渲染结果。变通的方案是使用特殊的 is 特性：
+
 ```
 <table>
   <tr is="my-row"></tr>
 </table>
 ```
+
 应当注意，如果使用来自以下来源之一的字符串模板，则没有这些限制：
 
 - <script type="text/x-template">
@@ -689,6 +693,7 @@ Vue.component('my-component', {
 组件实例的作用域是孤立的。这意味着不能 (也不应该) 在子组件的模板内直接引用父组件的数据。父组件的数据需要通过 prop 才能下发到子组件中。
 
 子组件要显式地用 props 选项声明它预期的数据：
+
 ```
 Vue.component('child', {
   // 声明 props
@@ -698,13 +703,17 @@ Vue.component('child', {
   template: '<span>{{ message }}</span>'
 })
 ```
+
 然后我们可以这样向它传入一个普通字符串：
+
 ```
 <child message="hello!"></child>
 ```
 注意：
 
+
 HTML 特性是不区分大小写的。所以，当使用的不是字符串模板时，camelCase (驼峰式命名) 的 prop 需要转换为相对应的 kebab-case (短横线分隔式命名)：
+
 ```
 Vue.component('child', {
   // 在 JavaScript 中使用 camelCase
