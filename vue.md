@@ -2868,6 +2868,7 @@ methods: {
 注意 `is="todo-item" ` 属性。这在 DOM 模板中是必需的，因为在 `<ul>` 中，只有 `<li>` 是有效元素。这与调用 `<todo-item>` 的实际结果相同，但是却可以解决浏览器潜在的解析错误。了解更多信息，请查看 DOM 模板解析注意事项。
 
 像 <ul>, <ol>, <table> 和 <select> 这样的元素，限制了出现在其中的元素，而像 <option> 这样的元素，只能出现在相应的元素中。
+  
 ```
 Vue.component('todo-item', {
   template: '\
@@ -3046,7 +3047,7 @@ var vm = new Vue({
 
 `computed` 属性默认只设置 `getter` 函数，不过在需要时，还可以提供 `setter` 函数：
 ```
-// ...
+
 computed: {
   fullName: {
     // getter 函数
@@ -3061,7 +3062,7 @@ computed: {
     }
   }
 }
-// ...
+
 ```
 现在当你运行 `vm.fullName = 'John Doe'`，将会调用 `setter`，然后会对应更新 `vm.firstName` 和 `vm.lastName`。
 
