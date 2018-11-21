@@ -61,6 +61,11 @@
         ADHIGHT =  window.innerWidth <= 600 ? 150 :300;
         window.ADWIDTH  = ADWIDTH; // 广告宽度
         window.ADHIGHT  = ADHIGHT; // 广告高度
+        
+        var adDom = document.querySelector(".jw-adv");
+        if(isFooler && adDom){
+          adDom.style.display = "none";
+        }
       }
       reSizeAD();
       window.onresize = reSizeAD;
