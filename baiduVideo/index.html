@@ -59,12 +59,12 @@
       function reSizeAD(){
         ADWIDTH =  window.innerWidth <= 600 ? 200 :400;
         ADHIGHT =  window.innerWidth <= 600 ? 150 :300;
+        window.ADWIDTH  = ADWIDTH; // 广告宽度
+        window.ADHIGHT  = ADHIGHT; // 广告高度
       }
       reSizeAD();
       window.onresize = reSizeAD;
-
-      window.ADWIDTH  = ADWIDTH; // 广告宽度
-      window.ADHIGHT  = ADHIGHT; // 广告高度
+    
     })(window)
   </script>
 </head>
@@ -100,17 +100,18 @@
           // },
           pause: {
             // 暂停广告
-            image: _res.data.live_ad,
+            image: "https://bce.bdstatic.com/portal/img/solution/video_ai/title_1aea461b.png",
             url: "http://www.darongshutech.com/"
           },
           end: {
             // 结束广告
-            image: _res.data.live_ad,
+            image: "https://bce.bdstatic.com/portal/img/solution/video_ai/title_1aea461b.png",
             url: "http://www.darongshutech.com/"
           }
         },
-        ak: "********************" // 公有云平台注册即可获得accessKey
+        ak: "7b9b426455944c2f82d0e7b0c3c61009" // 公有云平台注册即可获得accessKey
       });
+
   </script>
 </body>
 </html>
