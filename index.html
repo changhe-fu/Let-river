@@ -307,46 +307,43 @@
           }
         });
 
-        const text = {"code":2000,"msg":"请求成功","data":{"live_id":"525789602800205824","live_title":"省妇联直播","live_poster":"https://img.sqydt.darongshutech.com/image_201811211125262537.jpg","live_content":"四川省妇联十二届七次执委会议于7月30日在成都召开。会议学习传达了省委十一届三次全会精神，省委副书记邓小刚出席会议并作重要讲话。\r\n\r\n他强调：\r\n全省各级妇联要进一步增强政治性，牢固树立“四个意识”、增强“四个自信”，坚决做到“两个维护”，始终在思想上政治上行动上同以习近平同志为核心的党中央保持高度一致，团结带领广大妇联群众坚定不移听党话跟党走，确保妇联工作沿着正确政治方向前进。","live_flow_mini":"rtmp://hwzbin.yunshicloud.com/y8kawn/g5181v","live_flow_web":"https://hwzbfee.yunshicloud.com/x7px03/x7px03/yh9zk3/y8kawn/g5181v.m3u8","live_type":"application/x-mpegURL","live_mode":"1","live_ad":"https://img.sqydt.darongshutech.com/image_201811211205514797.png","live_sponsor":[{"logo":"https://img.sqydt.darongshutech.com/image_201811201424278160.png","name":"可口可乐"},{"logo":"https://img.sqydt.darongshutech.com/image_201811201424271054.png","name":"阿曼那资本"},{"logo":"https://img.sqydt.darongshutech.com/image_201811201424283486.png","name":"激石集团"},{"logo":"https://img.sqydt.darongshutech.com/image_201811201424293562.png","name":"红杉资本"}],"live_sponsor_ad":[{"pic":"https://img.sqydt.darongshutech.com/image_201811201424263538.png"}],"visit_num":"730"}};
+        const _res = {"code":2000,"msg":"请求成功","data":{"live_id":"525789602800205824","live_title":"省妇联直播","live_poster":"https://img.sqydt.darongshutech.com/image_201811211125262537.jpg","live_content":"四川省妇联十二届七次执委会议于7月30日在成都召开。会议学习传达了省委十一届三次全会精神，省委副书记邓小刚出席会议并作重要讲话。\r\n\r\n他强调：\r\n全省各级妇联要进一步增强政治性，牢固树立“四个意识”、增强“四个自信”，坚决做到“两个维护”，始终在思想上政治上行动上同以习近平同志为核心的党中央保持高度一致，团结带领广大妇联群众坚定不移听党话跟党走，确保妇联工作沿着正确政治方向前进。","live_flow_mini":"rtmp://hwzbin.yunshicloud.com/y8kawn/g5181v","live_flow_web":"https://hwzbfee.yunshicloud.com/x7px03/x7px03/yh9zk3/y8kawn/g5181v.m3u8","live_type":"application/x-mpegURL","live_mode":"1","live_ad":"https://img.sqydt.darongshutech.com/image_201811211205514797.png","live_sponsor":[{"logo":"https://img.sqydt.darongshutech.com/image_201811201424278160.png","name":"可口可乐"},{"logo":"https://img.sqydt.darongshutech.com/image_201811201424271054.png","name":"阿曼那资本"},{"logo":"https://img.sqydt.darongshutech.com/image_201811201424283486.png","name":"激石集团"},{"logo":"https://img.sqydt.darongshutech.com/image_201811201424293562.png","name":"红杉资本"}],"live_sponsor_ad":[{"pic":"https://img.sqydt.darongshutech.com/image_201811201424263538.png"}],"visit_num":"730"}};
+        var adFragmeng, firmFragmeng;
+        console.log("_res", _res);
+        myPlayer.src([{ type: "application/x-mpegURL", src: _res.data.live_flow_web }]);
+        myPlayer.poster(_res.data.live_poster);
+        document.querySelector("#adImg").src = _res.data.live_ad;
 
-        console.log(text);
-        const _res = JSON.parse(text);
-          var adFragmeng, firmFragmeng;
-          console.log("_res", _res);
-          myPlayer.src([{ type: "application/x-mpegURL", src: _res.data.live_flow_web }]);
-          myPlayer.poster(_res.data.live_poster);
-          document.querySelector("#adImg").src = _res.data.live_ad;
+        // 赞助商
+        if (_res.data.live_sponsor.length) {
+          firmFragmeng = document.createDocumentFragment();
+          _res.data.live_sponsor.forEach(element => {
+            console.log("element", element.logo);
+            let img = new Image();
+            img.src = element.logo;
+            img.alt = img.title = element.name;
 
-          // 赞助商
-          if (_res.data.live_sponsor.length) {
-            firmFragmeng = document.createDocumentFragment();
-            _res.data.live_sponsor.forEach(element => {
-              console.log("element", element.logo);
-              let img = new Image();
-              img.src = element.logo;
-              img.alt = img.title = element.name;
+            // 附加在文档碎片中
+            firmFragmeng.appendChild(img);
+          });
+          document.querySelector("#sponsorFirm").style.display = "block";
+          document.querySelector("#sponsorFirm div").appendChild(firmFragmeng);
+        }
+        // 赞助广告
+        if (_res.data.live_sponsor_ad.length) {
+          // 先创建文档碎片
+          adFragmeng = document.createDocumentFragment();
+          _res.data.live_sponsor_ad.forEach(element => {
+            console.log("element", element.pic);
+            let img = new Image();
+            img.src = element.pic;
 
-              // 附加在文档碎片中
-              firmFragmeng.appendChild(img);
-            });
-            document.querySelector("#sponsorFirm").style.display = "block";
-            document.querySelector("#sponsorFirm div").appendChild(firmFragmeng);
-          }
-          // 赞助广告
-          if (_res.data.live_sponsor_ad.length) {
-            // 先创建文档碎片
-            adFragmeng = document.createDocumentFragment();
-            _res.data.live_sponsor_ad.forEach(element => {
-              console.log("element", element.pic);
-              let img = new Image();
-              img.src = element.pic;
-
-              // 附加在文档碎片中
-              adFragmeng.appendChild(img);
-            });
-            document.querySelector("#sponsorAd").style.display = "block";
-            document.querySelector("#sponsorAd  div").appendChild(adFragmeng);
-          }
+            // 附加在文档碎片中
+            adFragmeng.appendChild(img);
+          });
+          document.querySelector("#sponsorAd").style.display = "block";
+          document.querySelector("#sponsorAd  div").appendChild(adFragmeng);
+        }
       })();
     </script>
   </body>
