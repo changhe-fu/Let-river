@@ -16,7 +16,7 @@
 
 ```
 window.ADWIDTH = 400; // 广告宽度
-window.ADHIGHT = 300; // 广告高度
+window.ADHEIGHT = 300; // 广告高度
 ```
-可通过修改 `window.ADWIDTH` 和 `window.ADHIGHT` 自定义
+可通过修改 `window.ADWIDTH` 和 `window.ADHEIGHT` 自定义
 
