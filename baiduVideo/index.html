@@ -65,11 +65,10 @@
           // adWidth = isFooler ? 200 : 400;
           // adHight = isFooler ? 150 : 300;
           // window.ADWIDTH = adWidth; // 广告宽度
-          // window.ADHIGHT = adHight; // 广告高度
-          
-          // 正方形广告
-          window.ADWIDTH = window.ADHIGHT = isFooler ? 200 : 300;
-          // console.log(window.ADWIDTH, window.ADHIGHT);
+          // window.ADHEIGHT = adHight; // 广告高度
+
+          window.ADWIDTH = window.ADHEIGHT = isFooler ? 200 : 300;
+          // console.log(window.ADWIDTH, window.ADHEIGHT);
         }
         reSizeAD();
         window.onresize = reSizeAD;
@@ -119,7 +118,7 @@
             url: "https://cloud.baidu.com/solution/video_ai.html"
           }
         },
-        ak: "************" // 公有云平台注册即可获得accessKey
+        ak: "7b9b426455944c2f82d0e7b0c3c61009" // 公有云平台注册即可获得accessKey
       });
 
       function $get(url, fn) {
