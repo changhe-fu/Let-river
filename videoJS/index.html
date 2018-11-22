@@ -4,7 +4,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width,initial-scale=1.0" />
     <title>直播</title>
-    <link href="video-js.min.css" rel="stylesheet" />
+    <link href="./video-js.min.css" rel="stylesheet" />
     <style>
       .video {
         width: 100%;
@@ -106,10 +106,8 @@
         background-color: rgba(0, 0, 0, 0.2);
       }
       #ab > div {
-        width: 42vh;
+        width: 40vh;
         height: auto;
-        max-width: 300px;
-        max-height: 300px;
         /* background-color: #ffffff; */
       }
       #ab > div img {
@@ -123,7 +121,7 @@
         background-color: #f8f8f8;
       }
       footer section {
-        padding: 25px 0 5px;
+        padding: 15px 0 5px;
       }
 
       footer h4 {
@@ -132,13 +130,18 @@
       }
 
       footer h4 strong {
-        display: inline-block;
-        padding: 5px 8px;
-        margin-top: -15px;
+        display: block;
+        width: 60px;
+        height: 22px;
+        margin: 0 auto;
+        margin-top: -11px;
         font-size: 0.9rem;
         font-weight: 400;
         color: #999;
         background-color: #f8f8f8;
+      }
+      #sponsorAd strong {
+        width: 76px;
       }
 
       #sponsorAd,
@@ -205,11 +208,8 @@
           height: 50vh;
         }
         #ab > div {
-          width: 42vh;
+          width: 40vh;
           height: auto;
-          max-width: 200px;
-          max-height: 200px;
-          /* background-color: #ffffff; */
         }
         #sponsorAd img {
           width: 48%;
@@ -276,7 +276,7 @@
         <div></div>
       </section>
     </footer>
-    <script src="video.min.js"></script>
+    <script src="./video.min.js"></script>
     <script>
       (function() {
         var adDom = document.querySelector("#ab");
@@ -307,64 +307,43 @@
           }
         });
 
-        const text = {
-          code: 2000,
-          msg: "\u8bf7\u6c42\u6210\u529f",
-          data: {
-            live_id: "525789602800205824",
-            live_title: "\u7701\u5987\u8054\u76f4\u64ad",
-            live_poster: "https:\/\/img.sqydt.darongshutech.com\/image_201811211125262537.jpg",
-            live_content:
-              "\u56db\u5ddd\u7701\u5987\u8054\u5341\u4e8c\u5c4a\u4e03\u6b21\u6267\u59d4\u4f1a\u8bae\u4e8e7\u670830\u65e5\u5728\u6210\u90fd\u53ec\u5f00\u3002\u4f1a\u8bae\u5b66\u4e60\u4f20\u8fbe\u4e86\u7701\u59d4\u5341\u4e00\u5c4a\u4e09\u6b21\u5168\u4f1a\u7cbe\u795e\uff0c\u7701\u59d4\u526f\u4e66\u8bb0\u9093\u5c0f\u521a\u51fa\u5e2d\u4f1a\u8bae\u5e76\u4f5c\u91cd\u8981\u8bb2\u8bdd\u3002\r\n\r\n\u4ed6\u5f3a\u8c03\uff1a\r\n\u5168\u7701\u5404\u7ea7\u5987\u8054\u8981\u8fdb\u4e00\u6b65\u589e\u5f3a\u653f\u6cbb\u6027\uff0c\u7262\u56fa\u6811\u7acb\u201c\u56db\u4e2a\u610f\u8bc6\u201d\u3001\u589e\u5f3a\u201c\u56db\u4e2a\u81ea\u4fe1\u201d\uff0c\u575a\u51b3\u505a\u5230\u201c\u4e24\u4e2a\u7ef4\u62a4\u201d\uff0c\u59cb\u7ec8\u5728\u601d\u60f3\u4e0a\u653f\u6cbb\u4e0a\u884c\u52a8\u4e0a\u540c\u4ee5\u4e60\u8fd1\u5e73\u540c\u5fd7\u4e3a\u6838\u5fc3\u7684\u515a\u4e2d\u592e\u4fdd\u6301\u9ad8\u5ea6\u4e00\u81f4\uff0c\u56e2\u7ed3\u5e26\u9886\u5e7f\u5927\u5987\u8054\u7fa4\u4f17\u575a\u5b9a\u4e0d\u79fb\u542c\u515a\u8bdd\u8ddf\u515a\u8d70\uff0c\u786e\u4fdd\u5987\u8054\u5de5\u4f5c\u6cbf\u7740\u6b63\u786e\u653f\u6cbb\u65b9\u5411\u524d\u8fdb\u3002",
-            live_flow_mini: "rtmp:\/\/hwzbin.yunshicloud.com\/y8kawn\/g5181v",
-            live_flow_web: "https:\/\/hwzbfee.yunshicloud.com\/x7px03\/x7px03\/yh9zk3\/y8kawn\/g5181v.m3u8",
-            live_type: "application\/x-mpegURL",
-            live_mode: "1",
-            live_ad: "https:\/\/img.sqydt.darongshutech.com\/image_201811211205514797.png",
-            live_sponsor: [{ logo: "https:\/\/img.sqydt.darongshutech.com\/image_201811201424278160.png", name: "\u53ef\u53e3\u53ef\u4e50" }, { logo: "https:\/\/img.sqydt.darongshutech.com\/image_201811201424271054.png", name: "\u963f\u66fc\u90a3\u8d44\u672c" }, { logo: "https:\/\/img.sqydt.darongshutech.com\/image_201811201424283486.png", name: "\u6fc0\u77f3\u96c6\u56e2" }, { logo: "https:\/\/img.sqydt.darongshutech.com\/image_201811201424293562.png", name: "\u7ea2\u6749\u8d44\u672c" }],
-            live_sponsor_ad: [{ pic: "https:\/\/img.sqydt.darongshutech.com\/image_201811201424263538.png" }],
-            visit_num: "674"
-          }
-        };
+        const _res = {"code":2000,"msg":"请求成功","data":{"live_id":"525789602800205824","live_title":"省妇联直播","live_poster":"https://img.sqydt.darongshutech.com/image_201811211125262537.jpg","live_content":"四川省妇联十二届七次执委会议于7月30日在成都召开。会议学习传达了省委十一届三次全会精神，省委副书记邓小刚出席会议并作重要讲话。\r\n\r\n他强调：\r\n全省各级妇联要进一步增强政治性，牢固树立“四个意识”、增强“四个自信”，坚决做到“两个维护”，始终在思想上政治上行动上同以习近平同志为核心的党中央保持高度一致，团结带领广大妇联群众坚定不移听党话跟党走，确保妇联工作沿着正确政治方向前进。","live_flow_mini":"rtmp://hwzbin.yunshicloud.com/y8kawn/g5181v","live_flow_web":"https://hwzbfee.yunshicloud.com/x7px03/x7px03/yh9zk3/y8kawn/g5181v.m3u8","live_type":"application/x-mpegURL","live_mode":"1","live_ad":"https://img.sqydt.darongshutech.com/image_201811211205514797.png","live_sponsor":[{"logo":"https://img.sqydt.darongshutech.com/image_201811201424278160.png","name":"可口可乐"},{"logo":"https://img.sqydt.darongshutech.com/image_201811201424271054.png","name":"阿曼那资本"},{"logo":"https://img.sqydt.darongshutech.com/image_201811201424283486.png","name":"激石集团"},{"logo":"https://img.sqydt.darongshutech.com/image_201811201424293562.png","name":"红杉资本"}],"live_sponsor_ad":[{"pic":"https://img.sqydt.darongshutech.com/image_201811201424263538.png"}],"visit_num":"730"}};
+        var adFragmeng, firmFragmeng;
+        console.log("_res", _res);
+        myPlayer.src([{ type: "application/x-mpegURL", src: _res.data.live_flow_web }]);
+        myPlayer.poster(_res.data.live_poster);
+        document.querySelector("#adImg").src = _res.data.live_ad;
 
-        console.log(text);
-        const _res = JSON.parse(text);
-          var adFragmeng, firmFragmeng;
-          console.log("_res", _res);
-          myPlayer.src([{ type: "application/x-mpegURL", src: _res.data.live_flow_web }]);
-          myPlayer.poster(_res.data.live_poster);
-          document.querySelector("#adImg").src = _res.data.live_ad;
+        // 赞助商
+        if (_res.data.live_sponsor.length) {
+          firmFragmeng = document.createDocumentFragment();
+          _res.data.live_sponsor.forEach(element => {
+            console.log("element", element.logo);
+            let img = new Image();
+            img.src = element.logo;
+            img.alt = img.title = element.name;
 
-          // 赞助商
-          if (_res.data.live_sponsor.length) {
-            firmFragmeng = document.createDocumentFragment();
-            _res.data.live_sponsor.forEach(element => {
-              console.log("element", element.logo);
-              let img = new Image();
-              img.src = element.logo;
-              img.alt = img.title = element.name;
+            // 附加在文档碎片中
+            firmFragmeng.appendChild(img);
+          });
+          document.querySelector("#sponsorFirm").style.display = "block";
+          document.querySelector("#sponsorFirm div").appendChild(firmFragmeng);
+        }
+        // 赞助广告
+        if (_res.data.live_sponsor_ad.length) {
+          // 先创建文档碎片
+          adFragmeng = document.createDocumentFragment();
+          _res.data.live_sponsor_ad.forEach(element => {
+            console.log("element", element.pic);
+            let img = new Image();
+            img.src = element.pic;
 
-              // 附加在文档碎片中
-              firmFragmeng.appendChild(img);
-            });
-            document.querySelector("#sponsorFirm").style.display = "block";
-            document.querySelector("#sponsorFirm div").appendChild(firmFragmeng);
-          }
-          // 赞助广告
-          if (_res.data.live_sponsor_ad.length) {
-            // 先创建文档碎片
-            adFragmeng = document.createDocumentFragment();
-            _res.data.live_sponsor_ad.forEach(element => {
-              console.log("element", element.pic);
-              let img = new Image();
-              img.src = element.pic;
-
-              // 附加在文档碎片中
-              adFragmeng.appendChild(img);
-            });
-            document.querySelector("#sponsorAd").style.display = "block";
-            document.querySelector("#sponsorAd  div").appendChild(adFragmeng);
-          }
+            // 附加在文档碎片中
+            adFragmeng.appendChild(img);
+          });
+          document.querySelector("#sponsorAd").style.display = "block";
+          document.querySelector("#sponsorAd  div").appendChild(adFragmeng);
+        }
       })();
     </script>
   </body>
