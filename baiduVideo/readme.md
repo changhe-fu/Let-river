@@ -1,6 +1,6 @@
 # 百度视频播放器demo
 
-官网demo地址:http://cyberplayer.bcelive.com/demo/new/index.html
+官网demo地址: http://cyberplayer.bcelive.com/demo/new/index.html
 
 ## 打开方式
 
@@ -20,3 +20,4 @@ window.ADHEIGHT = 300; // 广告高度
 ```
 可通过修改 `window.ADWIDTH` 和 `window.ADHEIGHT` 自定义
 
+原文件位于 **baidu** 文件夹中
